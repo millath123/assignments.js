@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function generateFibonacci(limit) {
+            const fibonacciSeries = [0, 1];
+
+            for (let i = 2; ; i++) {
+                const nextFibonacci = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+                if (nextFibonacci <= limit) {
+                    fibonacciSeries.push(nextFibonacci);
+                } else {
+                    break;
+                }
+            }
+
+            return fibonacciSeries;
+        }
+
+
+        const userInput = prompt("Enter a value to generate the Fibonacci series up to: ");
+        const limit = parseInt(userInput);
+
+        if (isNaN(limit)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            const fibonacciSeries = generateFibonacci(limit);
+            console.log("Fibonacci series up to", limit, ":", fibonacciSeries);
+        }
+
+    </script>
+</body>
+
+</html>

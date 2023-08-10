@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function checkpalidrom(str) {
+        //     const convertStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+        //     return convertStr === convertStr.split('').reverse().join('');
+        // }
+
+        // const userInput = prompt("Enter a string:");
+
+        // if (checkpalidrom(userInput)) {
+        //     console.log(`${userInput} is a palindrome.`);
+        // }
+        // else {
+        //     console.log(`${userInput} is not a palidrome.`)
+
+        // }
+
+        function checkpalidrom(str) {
+            const arrValue = string.split(''); 
+            const reveArrVal = arrValue.reverse();
+            const revString = reveArrVal.join('');
+
+            if (string == revString)  
+            {                           
+                alert('It is a Palindrome string ');  
+            }
+            else {
+                alert(' It is not a Palindrome string'); 
+            }
+        }
+        const string = prompt(' Enter the string to check Palindrome ');
+        const value = checkpalidrom(string);   
+        console.log(value);
+
+
+    </script>
+</body>
+-
+
+</html>

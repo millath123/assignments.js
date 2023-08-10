@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function calculateSum() {
+            const userInput = prompt("Enter array values separated by commas: ");
+            const inputArray = userInput.split(',').map(Number);
+
+            let sum = 0;
+            for (let num of inputArray) {
+                sum += num;
+            }
+            return sum;
+        }
+        const sum = calculateSum();
+        document.write("Sum of the numbers:", sum);
+    </script>
+
+</body>
+
+</html>

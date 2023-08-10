@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function removeDuplicates(arr) {
+        //     return [...new Set(arr)];
+        // }
+        // const userInput = prompt("Enter array values separated by commas: ");
+        // const inputArray = userInput.split(',').map(Number);
+
+        // const uniqueArray = removeDuplicates(inputArray);
+        // console.log("Array with duplicates removed:", uniqueArray);
+
+
+        let arr = prompt("Enter array values separated by commas: ");
+
+
+        function removeDuplicates(arr) {
+            return arr.filter((item,
+                index) => arr.indexOf(item) === index);
+        }
+        console.log(removeDuplicates(arr));
+
+
+    </script>
+</body>
+
+</html>

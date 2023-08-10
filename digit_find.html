@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to calculate the sum of digits in a number
+        function sumOfDigits(number) {
+            let sum = 0;
+
+            while (number > 0) {
+                const digit = number % 10;
+                sum += digit;
+                number = Math.floor(number / 10);
+            }
+
+            return sum;
+        }
+
+        // Allowing the user to enter a number
+        const userInput = prompt("Enter a number to calculate the sum of its digits: ");
+        const number = parseInt(userInput);
+
+        if (isNaN(number)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            const digitSum = sumOfDigits(number);
+            console.log(`Sum of digits of ${number} is:`, digitSum);
+        }
+
+    </script>
+</body>
+
+</html>

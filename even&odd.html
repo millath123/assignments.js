@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function sumEvenOrOdd(limit, isEven) {
+            let sum = 0;
+
+            for (let i = 0; i < limit; i++) {
+                if ((i % 2 === 0) === isEven) {
+                    sum += i;
+                }
+            }
+
+            return sum;
+        }
+
+        const number = parseInt(prompt("Enter a number: "));
+
+        if (isNaN(number)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            const evenOrOdd = prompt("Enter 'even' or 'odd' to find the sum of even or odd numbers: ");
+
+            if (evenOrOdd.toLowerCase() === "even") {
+                const evenSum = sumEvenOrOdd(number, true);
+                console.log(`Sum of even numbers below ${number} is:`, evenSum);
+            } else if (evenOrOdd.toLowerCase() === "odd") {
+                const oddSum = sumEvenOrOdd(number, false);
+                console.log(`Sum of odd numbers below ${number} is:`, oddSum);
+            } else {
+                console.log("Invalid input. Please enter 'even' or 'odd'.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

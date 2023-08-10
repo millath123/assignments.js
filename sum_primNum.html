@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to check if a number is prime
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Function to find the sum of prime numbers up to a given limit
+        function sumOfPrimes(limit) {
+            let sum = 0;
+
+            for (let num = 2; num <= limit; num++) {
+                if (isPrime(num)) {
+                    sum += num;
+                }
+            }
+
+            return sum;
+        }
+
+        // Allowing the user to enter a limit
+        const userInput = prompt("Enter a limit to find the sum of prime numbers up to: ");
+        const limit = parseInt(userInput);
+
+        if (isNaN(limit)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            const primeSum = sumOfPrimes(limit);
+            console.log(`Sum of prime numbers up to ${limit} is:`, primeSum);
+        }
+
+    </script>
+</body>
+
+</html>

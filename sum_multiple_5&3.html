@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to find the sum of multiples of 3 or 5 below a given number
+        function sumMultiples(limit) {
+            let sum = 0;
+
+            for (let i = 1; i < limit; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                    sum += i;
+                }
+            }
+
+            return sum;
+        }
+
+        // Allowing the user to enter a number
+        const userInput = prompt("Enter a number to find the sum of multiples of 3 or 5 below: ");
+        const number = parseInt(userInput);
+
+        if (isNaN(number)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            const multiplesSum = sumMultiples(number);
+            console.log(`Sum of multiples of 3 or 5 below ${number} is:`, multiplesSum);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMax(arr) {
+            return Math.max(...arr);
+        }
+
+        function findMin(arr) {
+            return Math.min(...arr);
+        }
+
+        const userInput = prompt("Enter array values separated by commas: ");
+        const inputArray = userInput.split(',').map(Number);
+
+        const maximum = findMax(inputArray);
+        const minimum = findMin(inputArray);
+
+        console.log("Maximum element:", maximum);
+        console.log("Minimum element:", minimum);
+
+    </script>
+</body>
+
+</html>

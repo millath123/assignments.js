@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to find the union of two arrays
+        function findUnion(arr1, arr2) {
+            const unionSet = new Set([...arr1, ...arr2]);
+            return Array.from(unionSet);
+        }
+
+        // Allowing the user to enter values for two arrays
+        const userInput1 = prompt("Enter array values for the first array separated by commas: ");
+        const userInput2 = prompt("Enter array values for the second array separated by commas: ");
+
+        const array1 = userInput1.split(',').map(Number);
+        const array2 = userInput2.split(',').map(Number);
+
+        const unionArray = findUnion(array1, array2);
+        console.log("Union of the two arrays:", unionArray);
+
+    </script>
+</body>
+
+</html>

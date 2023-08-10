@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to check if a number is prime
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Function to generate prime numbers up to a given limit
+        function generatePrimes(limit) {
+            const primes = [];
+
+            for (let num = 2; num <= limit; num++) {
+                if (isPrime(num)) {
+                    primes.push(num);
+                }
+            }
+
+            return primes;
+        }
+
+        // Allowing the user to enter the limit
+        const limit = parseInt(prompt("Enter a limit to generate prime numbers up to: "));
+        const primeNumbers = generatePrimes(limit);
+
+        document.write("Prime numbers up to", limit, ":", primeNumbers);
+
+    </script>
+</body>
+
+</html>

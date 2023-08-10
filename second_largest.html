@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to find the second largest number in an array
+        function findSecondLargest(arr) {
+            if (arr.length < 2) {
+                return "Array should have at least two elements";
+            }
+
+            let firstLargest = -Infinity;
+            let secondLargest = -Infinity;
+
+            for (let num of arr) {
+                if (num > firstLargest) {
+                    secondLargest = firstLargest;
+                    firstLargest = num;
+                } else if (num > secondLargest && num !== firstLargest) {
+                    secondLargest = num;
+                }
+            }
+
+            if (secondLargest === -Infinity) {
+                return "No second largest number found";
+            }
+
+            return secondLargest;
+        }
+
+        // Allowing the user to enter array values
+        const userInput = prompt("Enter array values separated by commas: ");
+        const inputArray = userInput.split(',').map(Number);
+
+        const result = findSecondLargest(inputArray);
+        console.log("The second largest number is:", result);
+
+    </script>
+</body>
+
+</html>
